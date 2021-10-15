@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_player_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/video_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        app:use_controller="false" />
+
+    <ImageView
+        android:id="@+id/video_player_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:scaleType="fitXY"
+        tools:ignore="contentDescription" />
+
+    <ImageButton
+        android:id="@+id/video_player_play"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:src="@drawable/exo_controls_pause"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        tools:ignore="contentDescription" />
+
+    <ProgressBar
+        android:id="@+id/video_player_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:background="@android:color/transparent" />
+
+</FrameLayout>
